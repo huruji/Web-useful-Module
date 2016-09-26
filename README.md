@@ -54,3 +54,13 @@ var bg=new HopeLog.background();
 [http://ce.sysu.edu.cn/hope/user/login.aspx](http://ce.sysu.edu.cn/hope/user/login.aspx)
 
 [http://ce.sysu.edu.cn/hope/admin/login.aspx](http://ce.sysu.edu.cn/hope/admin/login.aspx)
+
+
+##2、WowSlider##
+一个利用jQuery和css3做的一个slider，prefixfree处理css前缀，respond.js处理IE8-的媒体查询，IE9-做优雅降级处理，通透图片，图文动态交互。
+
+组件使用实例：
+[http://ce.sysu.edu.cn/hope](http://ce.sysu.edu.cn/hope)
+
+组件效果查看：
+[https://huruji.github.io/Web-useful-Module/WowSlider/index.html](https://huruji.github.io/Web-useful-Module/WowSlider/index.html)
