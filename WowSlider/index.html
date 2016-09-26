@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Examples</title>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link href="" rel="stylesheet">
+		<script src="jquery.js" ></script>
+		<link rel="stylesheet" type="text/css" href="slider-common.css">
+		<link rel="stylesheet" type="text/css" href="slider.css">
+        <link rel="stylesheet" type="text/css" href="slider-animate.css">
+		<script src="respond.min.js" ></script>
+	</head>
+	<body>
+		<div id="HopeSlider">
+			<ul>
+				<li >
+					<div class="smallEle-container smallEle-container0">
+						<div  class="small-img small-img0"></div>
+						<div class="small-txt small-txt0"></div>
+					</div>
+				</li>
+				<li>
+					<div class="smallEle-container smallEle-container1">
+						<div  class="small-img small-img1"></div>
+						<div class="small-txt small-txt1"></div>
+					</div>
+				</li>
+				<li>
+					<div class="smallEle-container smallEle-container2">
+						<div  class="small-img small-img2"></div>
+						<div class="small-txt small-txt2"></div>
+					</div>
+				</li>
+				<li>
+					<div class="smallEle-container smallEle-container3">
+						<div  class="small-img small-img3"></div>
+						<div class="small-txt small-txt3"></div>
+					</div>
+				</li>
+				<li>
+					<div class="smallEle-container smallEle-container4">
+						<div  class="small-img small-img4"></div>
+						<div class="small-txt small-txt4"></div>
+					</div>
+				</li>
+			</ul>
+			<div class="dot-list">
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+				<span class="dot"></span>
+			</div>
+			<span id="prev"></span>
+			<span id="next"></span>
+		</div>
+	</div>
+	<script id="HopeMedia" type="text/javascript">
+	@media screen and (max-width:2560px){
+	[slide_2k/main_slider1_2k.jpg,slide_2k/main_slider2_2k.jpg,slide_2k/main_slider3_2k.jpg,slide_2k/main_slider4_2k.jpg,slide_2k/main_slider5_2k.jpg]
+	}
+	@media screen and (max-width:1920px){
+	[slide_1920/main_slider1_1920.jpg,slide_1920/main_slider2_1920.jpg,slide_1920/main_slider3_1920.jpg,slide_1920/main_slider4_1920.jpg,slide_1920/main_slider5_1920.jpg]
+	}
+	@media screen and (max-width:1200px){
+	[slide_1200/main_slider1_1200.jpg,slide_1200/main_slider2_1200.jpg,slide_1200/main_slider3_1200.jpg,slide_1200/main_slider4_1200.jpg,slide_1200/main_slider5_1200.jpg]
+	}
+	@media screen and (max-width:960px){
+	[slide_960/main_slider1_960.jpg,slide_960/main_slider2_960.jpg,slide_960/main_slider3_960.jpg,slide_960/main_slider4_960.jpg,slide_960/main_slider5_960.jpg]
+	}
+	@media screen and (max-width:768px){
+	[slide_768/main_slider1_768.jpg,slide_768/main_slider2_768.jpg,slide_768/main_slider3_768.jpg,slide_768/main_slider4_768.jpg,slide_768/main_slider5_768.jpg]
+	}
+	</script>
+	<script src="slider.js" ></script>
+
+	<script>
+	(function($){
+	var browser=navigator.userAgent.indexOf("MSIE 9.0") || navigator.userAgent.indexOf("MSIE 8.0") || navigator.userAgent.indexOf("MSIE 7.0") || navigator.userAgent.indexOf("MSIE 6.0") || navigator.userAgent.indexOf("MSIE 5.0");
+	if(browser>0){
+		var slider = new HopeSlide({
+		basePath:'sliders-full/',
+		enableDots:true,
+		interval:5000,
+		});
+		$(".smallEle-container").css("display","none");
+		$(".smallEle-container").css("display","none");
+	}else{
+		var slider = new HopeSlide({
+	basePath:'sliders/',
+	enableDots:true,
+	interval:5000,
+	onBeginAnimation:function(current,next,currIndex,nextIndex){
+		var currImgClass=".small-img"+currIndex,
+			currTxtClass=".small-txt"+currIndex,
+		    nextImgClass=".small-img"+nextIndex,
+		    nextTxtClass=".small-txt"+nextIndex,
+		    currImgAniOut="small-img"+currIndex+"-out",
+		    currTxtAniOut="small-txt"+currIndex+"-out",
+		    nextImgAniIn="small-img"+nextIndex+"-in",
+		    nextTxtAniIn="small-txt"+nextIndex+"-in";
+        current.find(currImgClass).css({"animation":currImgAniOut+" 1s ease forwards","display":"block"});
+        current.find(currTxtClass).css({"animation":currTxtAniOut+" 1s ease forwards","display":"block"});
+        next.find(nextImgClass).css({"animation":nextImgAniIn+" 1s ease ","display":"block"});
+        next.find(nextTxtClass).css({"animation":nextTxtAniIn+" 1s ease ","display":"block"});
+	},
+	onEndAnimation:function(current,next,currIndex,nextIndex){
+		var cssDisNone={"animation":"none","display":"none"},
+		    cssDisBlock={"animation":"none","display":"block"},
+		    currImgClass=".small-img"+currIndex,
+			currTxtClass=".small-txt"+currIndex,
+		    nextImgClass=".small-img"+nextIndex,
+		    nextTxtClass=".small-txt"+nextIndex;
+        current.find(currImgClass).css(cssDisNone);
+        current.find(currTxtClass).css(cssDisNone);
+	    next.find(nextImgClass).css(cssDisBlock);
+	    next.find(nextTxtClass).css(cssDisBlock) 
+	}
+	})
+	}
+})(jQuery)
+	</script>
+	<script src="prefixfree.js"></script>
+	<script src="respond.min.js" ></script>
+</body>
+</html>

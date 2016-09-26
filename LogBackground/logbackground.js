@@ -8,6 +8,8 @@
 (function(){
 function LogBackground(opt){
         this.init(opt);
+        var self=this;
+        window.onresize=function(){self.resize(opt)};
     }
     LogBackground.prototype.init=function(opt){
         var self=this;
@@ -22,7 +24,7 @@ function LogBackground(opt){
             canvasContainerID:"canvas-container",
             canvasOpacity:0.8,
             canvasEleCss:"",
-            circleNum:40,
+            circleNum:30,
             circleColor:"rgba(180,180,180,1)",
             lineColor:"rgba(180,180,180,1)",
             circleMovemaxX:4,
@@ -53,6 +55,8 @@ function LogBackground(opt){
         this.context=this.canvas.getContext("2d");
         this.circleArr=[];
         this.moveArr=[];
+        this.circleNumTotals=Math.ceil(this.options.canvasWidth*this.options.circleNum/1000);
+        console.log(this.circleNumTotals);
     }
     LogBackground.prototype.random=function(max,_min){
         var minNum=arguments[1]||0;
@@ -60,7 +64,7 @@ function LogBackground(opt){
     }
     LogBackground.prototype._initCir=function(context){
         var self=this;
-        for(var i=0;i<self.options.circleNum;i++){
+        for(var i=0;i<self.circleNumTotals;i++){
             x=self.random(self.drawMaxWidth,self.drawMinWidth);
             y=self.random(self.drawMaxHeight,self.drawMinHeight);
             r=self.random(10);
@@ -94,7 +98,7 @@ function LogBackground(opt){
     LogBackground.prototype.render=function(){
         var self=this;
         self.context.clearRect(0,0,self.options.canvasWidth,self.options.canvasHeight);
-            for(var i=0;i<self.options.circleNum;i++){
+            for(var i=0;i<self.circleNumTotals;i++){
                 var changeCircle=self.circleArr[i];
                 changeCircle.centerX+=self.moveArr[i].x;
                 changeCircle.centerY+=self.moveArr[i].y;
@@ -114,8 +118,8 @@ function LogBackground(opt){
                 }
                 
             }
-            for(var j=0;j<self.options.circleNum;j++){
-                for(var k=0;k<self.options.circleNum;k++){
+            for(var j=0;j<self.circleNumTotals;j++){
+                for(var k=0;k<self.circleNumTotals;k++){
                     var bx=self.circleArr[j].centerX;
                     var by=self.circleArr[j].centerY;
                     var cx=self.circleArr[k].centerX;
@@ -146,6 +150,14 @@ function LogBackground(opt){
         ctx.fill();
         ctx.closePath();
         return circle;
+    }
+    LogBackground.prototype.resize=function(opt){
+        var self=this;
+        var canvasContainer=document.getElementById(this.options.canvasContainerID);
+        console.log(canvasContainer);
+        canvasContainer.removeChild(self.canvas);
+        self.canvas=null;
+        this.init(opt);
     }
     HopeLog.background=LogBackground;
  })()

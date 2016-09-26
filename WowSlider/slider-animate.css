@@ -1,0 +1,1241 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-09-26 19:53:44
+ * @version $Id$
+ */
+*{
+				margin:0;
+				padding:0;
+			}
+
+			.smallEle-container{
+				padding-bottom: 23.4375%;	
+			}
+			
+			@media screen and (max-width: 1920px){
+				.smallEle-container{
+				padding-bottom: 23.4375%;	
+				}
+			}
+			@media screen and (max-width: 1200px){
+				.smallEle-container{
+				padding-bottom: 37.5%;	
+				}
+			}
+			@media screen and (max-width: 768px){
+				.smallEle-container{
+				padding-bottom: 46.875%;	
+				}
+			}
+			.small-img{
+				background-repeat:no-repeat;
+                display:inline-block;
+                position:absolute;
+                background-size:100%;
+                left:-100%;
+                display:none;
+                z-index:100;
+			}
+			.small-txt{
+				background-repeat:no-repeat;
+				display:inline-block;
+				z-index:100; 
+				position:absolute;
+				display:none; 
+				background-size:100%;
+                right:-100%;
+			}
+			.small-img0{
+				display:block;
+			}
+			.small-txt0{
+				display:block;
+			}
+			.small-img0{
+				background-image: url(sliders/small_img/small-img0.png);
+			}
+			.small-txt0{
+				background-image: url(sliders/small_img/small-txt0.png);
+			}
+			.small-img1{
+				background-image: url(sliders/small_img/small-img1.png);
+			}
+			.small-txt1{
+				background-image: url(sliders/small_img/small-txt1.png);
+			}
+			.small-img2{
+				background-image: url(sliders/small_img/small-img2.png);
+			}
+			.small-txt2{
+				background-image: url(sliders/small_img/small-txt2.png);
+			}
+			.small-img3{
+				background-image: url(sliders/small_img/small-img3.png);
+			}
+			.small-txt3{
+				background-image: url(sliders/small_img/small-txt3.png);
+			}
+			.small-img4{
+				background-image: url(sliders/small_img/small-img4.png);
+			}
+			.small-txt4{
+				background-image: url(sliders/small_img/small-txt4.png);
+			}
+			@media screen and (max-width:960px){
+				.small-img0{
+					background-image: url(sliders/small_img/small-img0_960.png);
+				}
+				.small-img1{
+					background-image: url(sliders/small_img/small-img1_960.png);
+				}
+				.small-img2{
+					background-image: url(sliders/small_img/small-img2_960.png);
+				}
+				.small-img3{
+					background-image: url(sliders/small_img/small-img3_960.png);
+				}
+				.small-img4{
+					background-image: url(sliders/small_img/small-img4_960.png);
+				}
+			}
+			@media screen and (max-width:768px){
+				.small-img0{
+					background-image: url(sliders/small_img/small-img0_768.png);
+				}
+				.small-img1{
+					background-image: url(sliders/small_img/small-img1_768.png);
+				}
+				.small-img2{
+					background-image: url(sliders/small_img/small-img2_768.png);
+				}
+				.small-img3{
+					background-image: url(sliders/small_img/small-img3_768.png);
+				}
+				.small-img4{
+					background-image: url(sliders/small_img/small-img4_768.png);
+				}
+			}
+			.smallEle-container{
+				position:absolute;
+				width:100%;
+			}
+			
+			/*小图0定位*/
+			.small-img0{
+				top:17.7777777%;
+				width:29.0104%;
+ 				height:64%;
+ 				left:23.4375%;
+			}
+			.small-txt0{
+				top:31.1111111%;
+				width:18.59375%;
+ 				height:31.55555%;
+ 				right:23.6979166%;
+			}
+			/*小图1定位*/
+			.small-img1{
+				top:17.7777777%;
+				width:30.78125%;
+ 				height:70.66%;
+ 				left:22.23958%;
+			}
+			.small-txt1{
+				top:33.33333%;
+				width:14.0104166%;
+ 				height:26.66666%;
+ 				right:27.8645833%;
+			}
+			/*小图2定位*/
+			.small-img2{
+				top:16.66666%;
+				width:25%;
+ 				height:72.4444444%;
+ 				left:23.4375%;
+			}
+			.small-txt2{
+				top:31.7777777%;
+				width:20.9895833%;
+ 				height:32%;
+ 				right:22.13541%;
+			}
+			/*小图3定位*/
+			.small-img3{
+				top:14.4444444%;
+				width:21.25%;
+ 				height:76.22222%;
+ 				left:27.6041666%;
+			}
+			.small-txt3{
+				top:33.33333%;
+				width:9.1666666%;
+ 				height:32.88888%;
+ 				right:32.8888%;
+			}
+			/*小图4定位*/
+			.small-img4{
+				top:18.888888%;
+				width:21.6145833%;
+ 				height:62%;
+ 				left:26.0416666%;
+			}
+			.small-txt4{
+				top:32.2222%;
+				width:12.91666%;
+ 				height:24.66666%;
+ 				right:28.125%;
+			}
+
+
+			/*小图0的动画函数*/
+			@keyframes small-img0-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:23.4375%;
+				}
+			}
+			@keyframes small-img0-out{
+				from{
+					left:23.4375%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt0-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:23.6979166%;
+				}
+			}
+			@keyframes small-txt0-out{
+				from{
+					right:23.6979166%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图1的动画函数*/
+			@keyframes small-img1-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:22.23958%;
+				}
+			}
+			@keyframes small-img1-out{
+				from{
+					left:22.23958%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt1-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:27.8645833%;
+				}
+			}
+			@keyframes small-txt1-out{
+				from{
+					right:27.8645833%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图2的动画函数*/
+			@keyframes small-img2-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:23.4375%;
+				}
+			}
+			@keyframes small-img2-out{
+				from{
+					left:23.4375%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt2-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:22.13541%;
+				}
+			}
+			@keyframes small-txt2-out{
+				from{
+					right:22.13541%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图3的动画函数*/
+			@keyframes small-img3-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:27.6041666%;
+				}
+			}
+			@keyframes small-img3-out{
+				from{
+					left:27.6041666%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt3-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:32.88888%;
+				}
+			}
+			@keyframes small-txt3-out{
+				from{
+					right:32.88888%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图4的动画函数*/
+			@keyframes small-img4-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:26.0416666%;
+				}
+			}
+			@keyframes small-img4-out{
+				from{
+					left:26.0416666%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt4-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:28.125%;
+				}
+			}
+			@keyframes small-txt4-out{
+				from{
+					right:28.125%;
+				}to{
+					right:200%;
+				}
+			}
+		 
+			@media screen and (min-width:1921px){
+			/*小图0定位*/
+			.small-img0{
+				top:28.3333333%;
+				width:21.7578%;
+ 				height:48%;
+ 				left:29.8828%;
+			}
+			.small-txt0{
+				top:37.5%;
+				width:13.945313%;
+ 				height:23.66666%;
+ 				right:30.664063%;
+			}
+			/*小图1定位*/
+			.small-img1{
+				top:30%;
+				width:23.085938%;
+ 				height:53%;
+ 				left:31.25%;
+			}
+			.small-txt1{
+				top:40%;
+				width:10.5078%;
+ 				height:24%;
+ 				right:31.0546%;
+			}
+			/*小图2定位*/
+			.small-img2{
+				top:25.833333%;
+				width:18.7890%;
+ 				height:54.33333%;
+ 				left:30.2734%;
+			}
+			.small-txt2{
+				top:39.1666666%;
+				width:15.7421%;
+ 				height:23.833333%;
+ 				right:29.6875%;
+			}
+			/*小图3定位*/
+			.small-img3{
+				top:24.16666%;
+				width:15.9375%;
+ 				height:57.16666%;
+ 				left:33.0078%;
+			}
+			.small-txt3{
+				top:38.33333%;
+				width:6.835938%;
+ 				height:24.666666%;
+ 				right:36.5234%;
+			}
+			/*小图4定位*/
+			.small-img4{
+				top:28.33333%;
+				width:16.21093%;
+ 				height:62%;
+ 				left:30.8593%;
+			}
+			.small-txt4{
+				top:37.5%;
+				width:9.6875%;
+ 				height:18.5%;
+ 				right:34.1796%;
+			}
+		
+			/*小图0的动画函数*/
+			@keyframes small-img0-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:29.8828%;
+				}
+			}
+			@keyframes small-img0-out{
+				from{
+					left:29.8828%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt0-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:30.664063%;
+				}
+			}
+			@keyframes small-txt0-out{
+				from{
+					right:30.664063%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图1的动画函数*/
+			@keyframes small-img1-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:31.25%;
+				}
+			}
+			@keyframes small-img1-out{
+				from{
+					left:31.25%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt1-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:31.0546%;
+				}
+			}
+			@keyframes small-txt1-out{
+				from{
+					right:31.0546%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图2的动画函数*/
+			@keyframes small-img2-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:30.2734%;
+				}
+			}
+			@keyframes small-img2-out{
+				from{
+					left:30.2734%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt2-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:29.6875%;
+				}
+			}
+			@keyframes small-txt2-out{
+				from{
+					right:29.6875%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图3的动画函数*/
+			@keyframes small-img3-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:33.0078%;
+				}
+			}
+			@keyframes small-img3-out{
+				from{
+					left:33.0078%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt3-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:36.5234%;
+				}
+			}
+			@keyframes small-txt3-out{
+				from{
+					right:36.5234%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图4的动画函数*/
+			@keyframes small-img4-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:30.8593%;
+				}
+			}
+			@keyframes small-img4-out{
+				from{
+					left:30.8593%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt4-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:34.1796%;
+				}
+			}
+			@keyframes small-txt4-out{
+				from{
+					right:34.1796%;
+				}to{
+					right:200%;
+				}
+			}
+		}
+			 
+		@media screen and (max-width:1200px){
+			/*小图0定位*/
+			.small-img0{
+				top:18.8888889%;
+				width:46.4166667%;
+ 				height:64%;
+ 				left:6%;
+			}
+			.small-txt0{
+				top:31.1111111%;
+				width:31.25%;
+ 				height:31.55555%;
+ 				right:12.083333%;
+			}
+			/*小图1定位*/
+			.small-img1{
+				top:20%;
+				width:49.25%;
+ 				height:70.66%;
+ 				left:8.33333%;
+			}
+			.small-txt1{
+				top:32.222222%;
+				width:22.41666667%;
+ 				height:26.66666%;
+ 				right:16.6666666%;
+			}
+			/*小图2定位*/
+			.small-img2{
+				top:15.55555%;
+				width:40.08333%;
+ 				height:72.4444444%;
+ 				left:10.8333333%;
+			}
+			.small-txt2{
+				top:34.444444%;
+				width:33.583333%;
+ 				height:32%;
+ 				right:9.1666667%;
+			}
+			/*小图3定位*/
+			.small-img3{
+				top:14.4444444%;
+				width:34%;
+ 				height:76.22222%;
+ 				left:15.416666%;
+			}
+			.small-txt3{
+				top:31.1111111%;
+				width:14.583333%;
+ 				height:32.888888%;
+ 				right:24.58333333%;
+			}
+			/*小图4定位*/
+			.small-img4{
+				top:22.22222%;
+				width:34.583333%;
+ 				height:62%;
+ 				left:15%;
+			}
+			.small-txt4{
+				top:36.66666%;
+				width:20.666666%;
+ 				height:24.66666%;
+ 				right:19.16666%;
+			}
+		
+			/*小图0的动画函数*/
+			@keyframes small-img0-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:6%;
+				}
+			}
+			@keyframes small-img0-out{
+				from{
+					left:6%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt0-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:12.083333%;
+				}
+			}
+			@keyframes small-txt0-out{
+				from{
+					right:12.083333%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图1的动画函数*/
+			@keyframes small-img1-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:8.33333%;
+				}
+			}
+			@keyframes small-img1-out{
+				from{
+					left:8.33333%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt1-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:16.6666666%;
+				}
+			}
+			@keyframes small-txt1-out{
+				from{
+					right:16.6666666%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图2的动画函数*/
+			@keyframes small-img2-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:10.8333333%;
+				}
+			}
+			@keyframes small-img2-out{
+				from{
+					left:10.8333333%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt2-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:9.1666667%;
+				}
+			}
+			@keyframes small-txt2-out{
+				from{
+					right:9.1666667%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图3的动画函数*/
+			@keyframes small-img3-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:15.416666%;
+				}
+			}
+			@keyframes small-img3-out{
+				from{
+					left:15.416666%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt3-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:24.58333333%;
+				}
+			}
+			@keyframes small-txt3-out{
+				from{
+					right:24.58333333%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图4的动画函数*/
+			@keyframes small-img4-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:15%;
+				}
+			}
+			@keyframes small-img4-out{
+				from{
+					left:15%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt4-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:19.16666%;
+				}
+			}
+			@keyframes small-txt4-out{
+				from{
+					right:19.16666%;
+				}to{
+					right:200%;
+				}
+			}
+		}
+		@media screen and (max-width:960px){
+			/*小图0定位*/
+			.small-img0{
+				top:15.2777778%;
+				width:43.6458333%;
+ 				height:64.4444444%;
+ 				left:7.29166667%;
+			}
+			.small-txt0{
+				top:26.3888889%;
+				width:37.1875%;
+ 				height:39.4444444%;
+ 				right:6.77083333%;
+			}
+			/*小图1定位*/
+			.small-img1{
+				top:20.8333333%;
+				width:46.7708333%;
+ 				height:67.2222222%;
+ 				left:9.375%;
+			}
+			.small-txt1{
+				top:30.5555556%;
+				width:28.020833%;
+ 				height:40%;
+ 				right:11.9791667%;
+			}
+			/*小图2定位*/
+			.small-img2{
+				top:19.4444444%;
+				width:36.6666667%;
+ 				height:78.8888889%;
+ 				left:7.29166667%;
+			}
+			.small-txt2{
+				top:29.1666667%;
+				width:41.9791667%;
+ 				height:39.7222222%;
+ 				right:5.20833333%;
+			}
+			/*小图3定位*/
+			.small-img3{
+				top:18.0555556%;
+				width:31.9791667%;
+ 				height:71.9444444%;
+ 				left:19.2708333%;
+			}
+			.small-txt3{
+				top:27.7777778%;
+				width:18.3333333%;
+ 				height:41.1111111%;
+ 				right:23.4375%;
+			}
+			/*小图4定位*/
+			.small-img4{
+				top:22.22222%;
+				width:34.2708333%;
+ 				height:61.9444444%;
+ 				left:16.6666667%;
+			}
+			.small-txt4{
+				top:29.1666667%;
+				width:25.8333333%;
+ 				height:30.8333333%;
+ 				right:15.1041667%;
+			}
+		
+			/*小图0的动画函数*/
+			@keyframes small-img0-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:7.29166667%;
+				}
+			}
+			@keyframes small-img0-out{
+				from{
+					left:7.29166667%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt0-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:6.77083333%;
+				}
+			}
+			@keyframes small-txt0-out{
+				from{
+					right:6.77083333%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图1的动画函数*/
+			@keyframes small-img1-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:9.375%;
+				}
+			}
+			@keyframes small-img1-out{
+				from{
+					left:9.375%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt1-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:11.9791667%;
+				}
+			}
+			@keyframes small-txt1-out{
+				from{
+					right:11.9791667%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图2的动画函数*/
+			@keyframes small-img2-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:7.29166667%;
+				}
+			}
+			@keyframes small-img2-out{
+				from{
+					left:7.29166667%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt2-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:5.20833333%;
+				}
+			}
+			@keyframes small-txt2-out{
+				from{
+					right:5.20833333%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图3的动画函数*/
+			@keyframes small-img3-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:19.2708333%;
+				}
+			}
+			@keyframes small-img3-out{
+				from{
+					left:19.2708333%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt3-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:23.4375%;
+				}
+			}
+			@keyframes small-txt3-out{
+				from{
+					right:23.4375%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图4的动画函数*/
+			@keyframes small-img4-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:16.6666667%;
+				}
+			}
+			@keyframes small-img4-out{
+				from{
+					left:16.6666667%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt4-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:15.1041667%;
+				}
+			}
+			@keyframes small-txt4-out{
+				from{
+					right:15.1041667%;
+				}to{
+					right:200%;
+				}
+			}
+		}
+
+		@media screen and (max-width:768px){
+			/*小图0定位*/
+			.small-img0{
+				top:27.7777%;
+				width:40.3645%;
+ 				height:47.7777%;
+ 				left:5.8593%;
+			}
+			.small-txt0{
+				top:27.7777%;
+				width:46.4843%;
+ 				height:39.4444444%;
+ 				right:4.5572%;
+			}
+			/*小图1定位*/
+			.small-img1{
+				top:26.38888%;
+				width:47.7864%;
+ 				height:55%;
+ 				left:5.8593%;
+			}
+			.small-txt1{
+				top:27.7777%;
+				width:35.0260%;
+ 				height:40%;
+ 				right:7.1614%;
+			}
+			/*小图2定位*/
+			.small-img2{
+				top:27.7777%;
+				width:32.421875%;
+ 				height:71.3888%;
+ 				left:5.8593%;
+			}
+			.small-txt2{
+				top:27.7777%;
+				width:52.4739%;
+ 				height:39.7222222%;
+ 				right:3.90625%;
+			}
+			/*小图3定位*/
+			.small-img3{
+				top:16.666666%;
+				width:39.9739%;
+ 				height:71.9444444%;
+ 				left:10.4166%;
+			}
+			.small-txt3{
+				top:27.7777%;
+				width:22.9166%;
+ 				height:41.1111111%;
+ 				right:13.6718%;
+			}
+			/*小图4定位*/
+			.small-img4{
+				top:25%;
+				width:36.5885%;
+ 				height:53.0555%;
+ 				left:13.0203%;
+			}
+			.small-txt4{
+				top:30.5555%;
+				width:32.2916%;
+ 				height:30.8333333%;
+ 				right:11.71857%;
+			}
+		
+			/*小图0的动画函数*/
+			@keyframes small-img0-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:5.8593%;
+				}
+			}
+			@keyframes small-img0-out{
+				from{
+					left:5.8593%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt0-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:4.5572%;
+				}
+			}
+			@keyframes small-txt0-out{
+				from{
+					right:4.5572%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图1的动画函数*/
+			@keyframes small-img1-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:5.8593%;
+				}
+			}
+			@keyframes small-img1-out{
+				from{
+					left:5.8593%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt1-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:7.1614%;
+				}
+			}
+			@keyframes small-txt1-out{
+				from{
+					right:7.1614%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图2的动画函数*/
+			@keyframes small-img2-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:5.8593%;
+				}
+			}
+			@keyframes small-img2-out{
+				from{
+					left:5.8593%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt2-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:3.90625%;
+				}
+			}
+			@keyframes small-txt2-out{
+				from{
+					right:3.90625%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图3的动画函数*/
+			@keyframes small-img3-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:10.4166%;
+				}
+			}
+			@keyframes small-img3-out{
+				from{
+					left:10.4166%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt3-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:13.6718%;
+				}
+			}
+			@keyframes small-txt3-out{
+				from{
+					right:13.6718%;
+				}to{
+					right:200%;
+				}
+			}
+			/*小图4的动画函数*/
+			@keyframes small-img4-in{
+				0%{
+					left:-100%;
+				}
+				100%{
+					left:13.0203%;
+				}
+			}
+			@keyframes small-img4-out{
+				from{
+					left:13.0203%;
+				}to{
+					left:200%;
+				}
+			}
+			@keyframes small-txt4-in{
+				0%{
+					right:-100%;
+				}
+				100%{
+					right:11.71857%;
+				}
+			}
+			@keyframes small-txt4-out{
+				from{
+					right:11.71857%;
+				}to{
+					right:200%;
+				}
+			}
+		}
