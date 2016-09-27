@@ -49,9 +49,11 @@
 			}
 			.small-img0{
 				display:block;
+				animation:small-img0-in 1s ease;
 			}
 			.small-txt0{
 				display:block;
+				animation:small-txt0-in 1s  ease;
 			}
 			.small-img0{
 				background-image: url(sliders/small_img/small-img0.png);
